@@ -11,4 +11,4 @@ We will cover the basics of:
 
 If time allows we will see a bit on graphics!
 
-**Please make sure you have LaTeX installed in your machine beforehand.** Choosing an editor would be nice too - there are many free ones available! 
+**Please make sure you have LaTeX installed in your machine beforehand.** If you need help with that, check our [bootcamp instructions](http://github.com/CSWomenUMass/bootcamp). Choosing an editor would be nice too - there are many free ones available! 
