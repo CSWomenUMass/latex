@@ -1,0 +1,61 @@
+% TYPE OF DOCUMENTS
+
+% You can define the class and there are some optional parameters as font size, number of columns, paper orientation etc
+%\documentclass[options]{class}
+\documentclass[11pt]{article}    %possible classes: article, report, book, slides
+
+% PACKAGES
+
+\usepackage{amsmath, amsthm, amssymb}
+%\usepackage{fullpage}
+%\usepackage{algorithm}
+\usepackage{graphicx}
+%\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
+%\usepackage{cleveref}
+
+\newcommand{\cibele}[1]{\textbf{{[\small From Cibele: #1]}}}
+
+\title{Example 2}
+\author{[your name goes here]}
+\date{\today} %you can also set the date you want
+
+\begin{document}
+
+% Create a title based on the information you gave previously
+\maketitle
+
+\section{Math Mode}
+
+We must include the \emph{math} packages. Just go to the preamble and uncomment the line with packages amsmath, asthma, amssymb.
+
+The \$ \$ is the simplest way to add math inline. Simple example, $x + 2 = y$. In order to display a equation, we use \$\$ \$\$ as follows
+$$ x^2 + 2x + 3 =0.$$
+
+Some example using parenthesis and fraction.
+
+$$\left(\frac{x^2}{y^3}\right)$$
+
+What if I am writing my homework and I need to show a sequence of derivations? Go with the align environment. 
+
+\begin{align}
+5x + 7 &= 2 \\
+ 5x &= 2 -7 \\
+ x&= \frac{-5}{5} \nonumber \\
+ x &= -1
+\end{align}
+
+And if my homework involves matrices? 
+
+\begin{align*}\begin{matrix} %options are matrix, bmatrix, matrix, and more. What is the difference?1 & 2 & 3 \\4 & 5 & 6 \\
+7 & 8 & 9\end{matrix} 
+\end{align*}
+
+\subsection{Define a command}
+
+We can define our own commands in Latex. I already defined mine:
+
+\cibele{How does it look?}
+
+
+
+\end{document}

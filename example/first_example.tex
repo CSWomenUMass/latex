@@ -1,0 +1,113 @@
+% TYPE OF DOCUMENTS
+
+% You can define the class and there are some optional parameters as font size, number of columns, paper orientation etc
+%\documentclass[options]{class}
+\documentclass[11pt]{article}    %possible classes: article, report, book, slides
+
+% PACKAGES
+
+\usepackage{amsmath, amsthm, amssymb}
+%\usepackage{fullpage}
+%\usepackage{algorithm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
+%\usepackage{cleveref}
+
+\title{Example 1}
+\author{[your name goes here]}
+\date{\today} %you can also set the date you want
+
+\begin{document}
+
+
+% Create a title based on the information you gave previously
+\maketitle
+
+%Can be used with the class type report or book
+%\chapter{}
+
+\section{Learning some environments}
+
+Let's see how items work.
+
+\begin{itemize}
+	\item This environment gives me bullet points
+	\item[*] Can change the bullet point
+\end{itemize}
+
+\noindent What if we want numbers or some sort of enumeration?
+
+\begin{enumerate}
+	\item This environment gives me numbers
+\end{enumerate}
+
+
+\subsection{Tables and figures}
+
+Let's start ``easy'' with a table.
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{|r |r |r |r |r |r |r |} %specify how many columns, the position of the text in each column, lines between columns
+    \hline %horizontal line
+    Sun & Mon & Tue & Wed & Thu & Fri & Sat \\
+    \hline
+    rest & &  & &  &  & rest \\
+    \hline
+    \end{tabular}
+  \end{center}
+  \caption{Weekdays}
+  \label{table}
+\end{table}
+
+What about figures? It is a similar structure. See Figure~\ref{umbrella}.
+
+\begin{figure}[h] %where the figure will stay. options: h=here, t=top, b=bottom
+%\centering
+	\includegraphics[width=\linewidth]{rainy} %can add option as width
+	\caption{I think we need one of those today.}
+	\label{umbrella}
+\end{figure}
+
+What if we want to have two figures bundled in the same float? We can! See Figure~\ref{two umbrellas}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{rainy}
+        \caption{Black umbrella}
+        \label{black}
+    \end{subfigure}
+    ~ %add desired spacing between images, e.g. ~, \quad, \qquad, \hfill,  or a blank line to force the subfigure onto a new line
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{rainypurple}
+        \caption{Purple umbrella}
+        \label{purple}
+    \end{subfigure}
+     \caption{Maybe we need more than one umbrella.}
+     \label{two umbrellas}
+\end{figure}
+
+
+\section{Simple bibliography}
+
+We can use the ``bibliography'' environment. Each item has a key associated to it so we can refer to those in the text. We use the command
+cite to so, as for example \cite{les85}. And we can also put multiple keys at once as in \cite{don89,rondon89}.
+
+\begin{thebibliography}{9}
+
+\bibitem{les85} Leslie Lamport, 1985. 
+\emph{\LaTeX---A Document Preparation System---User?s Guide and Reference Manual},
+Addision-Wesley, Reading.
+
+\bibitem{don89}Donald E. Knuth, 1989. \emph{Typesetting Concrete
+Mathematics}, TUGBoat, 10(1):31-36.
+
+\bibitem{rondon89}Ronald L. Graham, Donald E. Knuth, and Ore
+Patashnik, 1989. \emph{Concrete Mathematics: A Foundation for
+Computer Science}, Addison-Wesley, Reading.
+\end{thebibliography}
+
+\end{document}
